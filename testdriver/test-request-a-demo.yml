@@ -1,0 +1,64 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Request a Demo".
+    commands:
+      - command: hover-text
+        text: Request a Demo
+        description: button in the header
+        action: click
+  - prompt: Assert that a booking form or demo setup page shows.
+    commands:
+      - command: assert
+        expect: Get Started
+  - prompt: Complete the demo request process.
+    commands:
+      - command: hover-text
+        text: First Name*
+        description: input field for first name
+        action: click
+      - command: type
+        text: John
+  - prompt: Complete the demo request process.
+    commands:
+      - command: hover-text
+        text: Last Name*
+        description: input field for last name
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Business email*
+        description: input field for business email
+        action: click
+      - command: type
+        text: john.doe@example.com
+      - command: hover-text
+        text: Company*
+        description: input field for company
+        action: click
+      - command: type
+        text: Example Corp
+  - prompt: Complete the demo request process.
+    commands:
+      - command: hover-text
+        text: Business email*
+        description: input field for business email
+        action: click
+      - command: type
+        text: john.doe@example.com
+      - command: hover-text
+        text: Last Name*
+        description: input field for last name
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Website URL*
+        description: input field for website URL
+        action: click
+      - command: type
+        text: www.example.com
+      - command: hover-text
+        text: Accept
+        description: submit button
+        action: click
