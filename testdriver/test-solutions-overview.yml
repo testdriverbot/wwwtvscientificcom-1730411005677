@@ -1,0 +1,24 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Solutions" in the header.
+    commands:
+      - command: hover-text
+        text: Solutions
+        description: link in the header
+        action: click
+  - prompt: Assert that a list of solutions provided by the website shows.
+    commands:
+      - command: assert
+        expect: the list of solutions is visible
+  - prompt: Explore at least one solution in detail.
+    commands:
+      - command: hover-text
+        text: Retail
+        description: option under Solutions
+        action: click
+  - prompt: >-
+      Assert that the page provides comprehensive information without errors.  #
+      Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: the page provides comprehensive information without errors
