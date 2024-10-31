@@ -1,0 +1,18 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Resources" and locate "Contact Us".
+    commands:
+      - command: hover-text
+        text: Resources
+        description: link in the header
+        action: click
+  - prompt: Click on "Resources" and locate "Contact Us".
+    commands:
+      - command: scroll-until-text
+        text: Contact Us
+        direction: down
+  - prompt: Click on "Resources" and locate "Contact Us".
+    commands:
+      - command: scroll-until-text
+        text: Contact Us
+        direction: down
