@@ -1,0 +1,24 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Customers".
+    commands:
+      - command: hover-text
+        text: Customers
+        description: link in the header
+        action: click
+  - prompt: Assert that a customer success stories or testimonials page shows.
+    commands:
+      - command: assert
+        expect: Our Science speaks for itself
+  - prompt: Return to "Platform" using header links.
+    commands:
+      - command: hover-text
+        text: Platform
+        description: link in the header
+        action: click
+  - prompt: >-
+      Assert that the navigation is smooth with no errors.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: Navigation is smooth with no errors
