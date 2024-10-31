@@ -1,0 +1,78 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Create a Campaign".
+    commands:
+      - command: hover-text
+        text: Create a Campaign
+        description: button to start creating a new campaign
+        action: click
+  - prompt: Assert that a form or page to create a campaign shows.
+    commands:
+      - command: assert
+        expect: Buy and Measure TV like Search and Social
+  - prompt: Complete the form or steps.
+    commands:
+      - command: hover-text
+        text: First Name*
+        description: first name input field
+        action: click
+      - command: type
+        text: John
+      - command: hover-text
+        text: Last Name*
+        description: last name input field
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Business Email*
+        description: business email input field
+        action: click
+      - command: type
+        text: john.doe@example.com
+      - command: hover-text
+        text: Phone Number*
+        description: phone number input field
+        action: click
+      - command: type
+        text: 1234567890
+      - command: hover-text
+        text: Company Name*
+        description: company name input field
+        action: click
+      - command: type
+        text: Example Corp
+      - command: hover-text
+        text: Website*
+        description: website input field
+        action: click
+      - command: type
+        text: www.example.com
+      - command: hover-text
+        text: GET STARTED
+        description: submit button
+        action: click
+  - prompt: Complete the form or steps.
+    commands:
+      - command: hover-text
+        text: Business Email*
+        description: business email input field
+        action: click
+      - command: type
+        text: valid.email@example.com
+      - command: hover-text
+        text: GET STARTED
+        description: submit button
+        action: click
+  - prompt: Complete the form or steps.
+    commands:
+      - command: hover-text
+        text: Business Email*
+        description: business email input field
+        action: click
+      - command: type
+        text: valid.email@example.com
+      - command: hover-text
+        text: GET STARTED
+        description: submit button
+        action: click
