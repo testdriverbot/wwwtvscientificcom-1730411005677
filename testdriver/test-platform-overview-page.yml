@@ -1,0 +1,12 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Platform" in the header.
+    commands:
+      - command: hover-text
+        text: Platform
+        description: link in the header
+        action: click
+  - prompt: Assert that a detailed overview page of the platform shows.
+    commands:
+      - command: assert
+        expect: Platform Overview is visible
